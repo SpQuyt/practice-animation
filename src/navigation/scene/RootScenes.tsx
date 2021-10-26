@@ -4,6 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Host } from 'react-native-portalize';
 import { useAppSelector } from 'app-redux/hooks';
 import { isIos } from 'utilities/helper';
+import CustomPickerView from 'feature/test/picker/CustomPickerView';
+import CustomProgressBarView from 'feature/test/progressBar/CustomProgressBarView';
 import { APP_ROUTE } from '../config/routes';
 import navigationConfigs from '../config/options';
 import MainTabContainer from './TabScenes';
@@ -14,7 +16,9 @@ const MainStack = createStackNavigator();
 const AppStack = () => (
     <Host>
         <MainStack.Navigator keyboardHandlingEnabled={isIos} headerMode={'none'} screenOptions={navigationConfigs}>
-            <MainStack.Screen name={APP_ROUTE.MAIN_TAB} component={MainTabContainer} />
+            {/* <MainStack.Screen name={APP_ROUTE.MAIN_TAB} component={MainTabContainer} /> */}
+            <MainStack.Screen name={'CUSTOM_PICKER'} component={CustomPickerView} />
+            {/* <MainStack.Screen name={'CUSTOM_PROGRESS_BAR'} component={CustomProgressBarView} /> */}
         </MainStack.Navigator>
     </Host>
 );
