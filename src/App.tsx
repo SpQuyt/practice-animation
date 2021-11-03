@@ -11,7 +11,16 @@ import { RootSiblingParent } from 'react-native-root-siblings';
 import APIProvider from 'utilities/context/APIProvider';
 import { addMenuClearAsyncStorage } from 'utilities/helper';
 
-LogBox.ignoreLogs(['Require cycle:']);
+LogBox.ignoreLogs([
+    'Require cycle:',
+    'source.uri',
+    'componentWillReceiveProps',
+    'Task orphaned',
+    'componentWillMount',
+    'Looks like',
+    'You should use',
+    'Animated',
+]);
 
 const App: FunctionComponent = () => {
     const onBeforeLift = () => {

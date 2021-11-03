@@ -16,6 +16,7 @@ const Light = {
         secondary: '#E9ECEF',
         textPrimary: '#000000',
         textSecondary: '#607d8b',
+        captionText: '#C0C0C0',
     },
     FONTS: {
         defaultFont: 'Montserrat-Regular',
