@@ -100,7 +100,7 @@ const StyledList = (props: Props, ref: any) => {
                 />
             }
             ListFooterComponent={renderFooter}
-            keyboardShouldPersistTaps={'never'}
+            keyboardShouldPersistTaps={'handled'}
             {...props}
         />
     );
